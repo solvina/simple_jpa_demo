@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "844b9b85-6332-4acf-a538-4e1dd1a2a982",
+		"name": "Jpa_example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13625075"
+	},
+	"item": [
+		{
+			"name": "Get a quotation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quotations/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quotations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a subscription",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscriptions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriptions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all subscriptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all quotations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/quotations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quotations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Peter\",\n    \"lastName\": \"Pan\",\n    \"middleName\": \"Hook\",\n    \"email\": \"petr.hook@email.com\",\n    \"phoneNumber\": \"+1 2343 53 321\",\n    \"birthDate\": \"1993-12-02\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revert to original user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Jon\",\n    \"lastName\": \"Doe\",\n    \"middleName\": null,\n    \"email\": \"jon.doe@email.com\",\n    \"phoneNumber\": \"+123 233 233 233\",\n    \"birthDate\": \"1991-01-01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/quatation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quatation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Indiana\",\n    \"lastName\": \"Jones\",\n    \"middleName\": null,\n    \"email\": \"indiana.jones@email.com\",\n    \"phoneNumber\": \"+123 111 233 233\",\n    \"birthDate\": \"1923-04-12\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new quotation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"beginningOfInsurance\": \"2023-12-19T11:01:00Z\",\n    \"dateOfSigningMortgage\": \"2023-07-02\",\n    \"insuredAmount\": 100.0,\n    \"customer\": {\n    \"id\": 1,\n    \"firstName\": \"Jon\",\n    \"lastName\": \"Doe\",\n    \"middleName\": null,\n    \"email\": \"jon.doe@email.com\",\n    \"phoneNumber\": \"+123 233 233 233\",\n    \"birthDate\": \"1991-01-01\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/quotations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"quotations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2024-01-03\",\n    \"validUntil\": \"2026-12-03\",\n    \"quotation\": {\n        \"id\": 1,\n        \"beginningOfInsurance\": \"2023-05-01T12:01:00Z\",\n        \"dateOfSigningMortgage\": \"2023-05-01\",\n        \"insuredAmount\": 9.9999999E7,\n        \"customer\": {\n            \"id\": 1,\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Pan\",\n            \"middleName\": \"Hook\",\n            \"email\": \"petr.hook@email.com\",\n            \"phoneNumber\": \"+1 2343 53 321\",\n            \"birthDate\": \"1993-12-02\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
