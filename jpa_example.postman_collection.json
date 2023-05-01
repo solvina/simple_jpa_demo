@@ -27,7 +27,7 @@
 			"response": []
 		},
 		{
-			"name": "Get a user",
+			"name": "Get a customer",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -124,7 +124,7 @@
 			"response": []
 		},
 		{
-			"name": "Update user",
+			"name": "Update customer",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -153,9 +153,9 @@
 			"response": []
 		},
 		{
-			"name": "Revert to original user",
+			"name": "Revert to original customer",
 			"request": {
-				"method": "POST",
+				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -168,21 +168,21 @@
 					"raw": "{\n    \"id\": 1,\n    \"firstName\": \"Jon\",\n    \"lastName\": \"Doe\",\n    \"middleName\": null,\n    \"email\": \"jon.doe@email.com\",\n    \"phoneNumber\": \"+123 233 233 233\",\n    \"birthDate\": \"1991-01-01\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/quatation",
+					"raw": "http://localhost:8080/customers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"quatation"
+						"customers"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Create new user",
+			"name": "Create new customer",
 			"request": {
 				"method": "POST",
 				"header": [
