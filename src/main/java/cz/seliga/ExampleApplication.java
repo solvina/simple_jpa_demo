@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @SpringBootApplication
@@ -39,7 +40,7 @@ public class ExampleApplication {
             );
             List<Quotation> quotations = List.of(
                     new Quotation(
-                            Instant.parse("2023-05-01T12:01:00Z"),
+                            Instant.now().plus(1, ChronoUnit.DAYS),
                             LocalDate.of(2023, 5, 1),
                             9999_9999d,
                             customers.get(0)
