@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Optional;
 
+/**
+ * Public/business methods available for quotations management
+ */
 @Controller
 public class QuotationManager {
     private final QuotationRepository quotationRepository;

@@ -7,6 +7,9 @@ import org.hibernate.annotations.OnDeleteAction;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Value object for a Subscription, contains reference to a {@link Quotation}
+ */
 @Entity
 public class Subscription {
     @Id

@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Optional;
 
+/**
+ * Public/business methods available for subscription management
+ */
 @Controller
 public class SubscriptionManager {
     private final SubscriptionRepository subscriptionRepository;

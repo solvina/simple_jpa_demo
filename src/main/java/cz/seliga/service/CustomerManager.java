@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 
 import java.util.Optional;
 
+/**
+ * Public/business methods available for customers management
+ */
 @Controller
 public class CustomerManager {
     private final CustomerRepository customerRepository;

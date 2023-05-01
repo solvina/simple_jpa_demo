@@ -10,6 +10,9 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Value object for a Quotation, contains reference to a {@link Customer}
+ */
 @Entity
 public class Quotation {
     @Id
